@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int t;
+    cin>>t;
+
+    while(t--){
+        int n;
+        cin>>n;
+        int a[n];
+        int largest = 0;
+       
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+            if(a[i] > largest){
+                largest = a[i];
+            }
+        }
+        int count = 0;
+        for(int i=0;i<n;i++){
+            if(a[i] == largest){
+                count++;
+            }
+        }
+        cout<<count<<endl;
+    }
+}
